@@ -24,9 +24,9 @@ const authUser = asyncHandler(async (req, res) => {
   }
 });
 
-//@desc Register new User
-//@route POST/api/users
-//access Public
+// @desc    Register a new user
+// @route   POST /api/users
+// @access  Public
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
 
@@ -53,7 +53,7 @@ const registerUser = asyncHandler(async (req, res) => {
     });
   } else {
     res.status(400);
-    throw new Error('Invalid user Data');
+    throw new Error('Invalid user data');
   }
 });
 
